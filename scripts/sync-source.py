@@ -1,10 +1,11 @@
 """Mirror upstream bytes without rewriting URLs or dropping app entries."""
 import json
+import time
 import pathlib
 import urllib.request
 
 url = "https://raw.githubusercontent.com/Alaaaya/Mirsa/main/source.json"
-request = urllib.request.Request(url, headers={"Cache-Control": "no-cache"})
+request = urllib.request.Request(url + "?sync=" + str(time.time_ns()), headers={"Cache-Control": "no-cache"})
 with urllib.request.urlopen(request, timeout=60) as response:
     data = response.read()
 feed = json.loads(data)
