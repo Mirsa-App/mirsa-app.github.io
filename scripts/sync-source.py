@@ -4,7 +4,7 @@ import time
 import pathlib
 import urllib.request
 
-url = "https://raw.githubusercontent.com/Alaaaya/Mirsa/main/source.json"
+url = "https://github.com/Alaaaya/Mirsa/releases/download/setup/source.json"
 request = urllib.request.Request(url + "?sync=" + str(time.time_ns()), headers={"Cache-Control": "no-cache"})
 with urllib.request.urlopen(request, timeout=60) as response:
     data = response.read()
