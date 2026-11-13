@@ -659,14 +659,10 @@
         <section class="x-hero">
           <div class="x-hero__copy">
             <div class="x-iconwrap"><img class="x-icon" src="mirsa-icon.png" alt="أيقونة تطبيق مرسى" data-i-alt="iconAlt" /></div>
-            <span class="x-badge" data-i="version">الإصدار 1.3.78</span>
             <h1 class="x-shimmer" data-i="title">مرسى</h1>
             <p class="x-hero__sub" data-i="heroSub">ثبّت تطبيقاتك على الآيفون مباشرة، بدون كمبيوتر.</p>
             <p class="x-hero__line" data-i="heroLine">حاوية بلا حدود، سورسات جاهزة، توقيع بشهادتك، وتحديثات تلقائية — كله من جوّا الآيفون.</p>
-            <div class="x-actions">
-              <a class="x-btn x-btn--main" href="https://github.com/Alaaaya/Mirsa/releases/download/setup/Mirsa-Setup.ipa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg><span data-i="ctaMain">حمّل مرسى</span></a>
-              <a class="x-btn" href="https://github.com/Alaaaya/Mirsa-iOS/releases/latest/download/Mirsa.ipa" data-i="ctaSec">آخر إصدار من Mirsa.ipa</a>
-            </div>
+            <div class="x-actions"><a class="x-btn x-btn--main" href="#apps"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg><span data-i="ctaMain">حمّل مرسى</span></a></div>
             <ul class="x-trust">
               <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span data-i="tr1">بدون كمبيوتر</span></li>
               <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span data-i="tr2">بياناتك بالـKeychain</span></li>
@@ -829,20 +825,36 @@
           </div>
         </section>
 
+        <section class="x-sec" id="apps" aria-labelledby="apps-h">
+          <div class="mx-apps">
+            <h2 id="apps-h" class="x-shimmer" data-i="appsTitle">حمّل تطبيقات مرسى</h2>
+            <div class="mx-grid">
+              <article class="x-glass mx-card" data-app="com.alaa.mirsa.setup">
+                <h3 data-i="setupT">مرسى Setup</h3>
+                <p data-i="setupD">ثبّته أولاً. بيثبّت مرسى على آيفونك بشهادتك أو بـ ESign.</p>
+                <p class="mx-ver" aria-live="polite" data-state="loading"></p>
+                <a class="x-btn x-btn--main mx-dl" href="#apps" aria-disabled="true" data-i="dlSetup">تحميل Setup</a>
+              </article>
+              <article class="x-glass mx-card" data-app="com.alaa.mirsa">
+                <h3 data-i="mainT">مرسى</h3>
+                <p data-i="mainD">التطبيق الرئيسي: حاويات، سورسات جاهزة، وتحديثات تلقائية.</p>
+                <p class="mx-ver" aria-live="polite" data-state="loading"></p>
+                <a class="x-btn x-btn--main mx-dl" href="#apps" aria-disabled="true" data-i="dlMain">تحميل مرسى</a>
+              </article>
+            </div>
+          </div>
+        </section>
         <section class="x-sec" id="get">
           <div class="x-cta x-glass x-up">
             <img class="x-icon" src="mirsa-icon.png" alt="" />
             <h2 class="x-shimmer" data-i="ctaTitle">جاهز تبلّش؟</h2>
             <p data-i="ctaSub">حمّل مرسى وثبّت تطبيقاتك على الآيفون مباشرة، بدون كمبيوتر.</p>
-            <div class="x-actions">
-              <a class="x-btn x-btn--main" href="https://github.com/Alaaaya/Mirsa/releases/download/setup/Mirsa-Setup.ipa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg><span data-i="ctaMain">حمّل مرسى</span></a>
-              <a class="x-btn" href="https://github.com/Alaaaya/Mirsa-iOS/releases/latest/download/Mirsa.ipa" data-i="ctaSec">آخر إصدار من Mirsa.ipa</a>
-            </div>
+            <div class="x-actions"><a class="x-btn x-btn--main" href="#apps"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg><span data-i="ctaMain">حمّل مرسى</span></a></div>
           </div>
         </section>
       </main>
       <footer class="x-foot">
-        <p><strong>© 2026 Mirsa</strong> · <span data-i="version2">الإصدار 1.3.78</span></p>
+        <p><strong>© 2026 Mirsa</strong></p>
         <p class="x-small" data-i="libs">يستخدم مكتبات مفتوحة المصدر: isideload (MIT)، idevice (MIT)، apple-codesign-quick (LGPL-2.1-or-later).</p>
         <p class="x-small" data-i="notApple">مرسى غير تابع لشركة Apple.</p>
       </footer>
@@ -855,7 +867,7 @@
           en: {
             brand: "Mirsa", nFeat: "Features", nInstall: "Install", nSources: "Sources", nRefresh: "Refresh", nFaq: "FAQ", nAbout: "Developer",
             iconAlt: "Mirsa app icon", iconAlt2: "Mirsa icon", tilesAria: "Highlights",
-            version: "Version 1.3.78", version2: "Version 1.3.78", title: "Mirsa",
+            title: "Mirsa", appsTitle: "Download the Mirsa apps", setupT: "Mirsa Setup", setupD: "Install this first. It installs Mirsa on your iPhone with your certificate or ESign.", dlSetup: "Download Setup", mainT: "Mirsa", mainD: "The main app: containers, ready-made sources and automatic updates.", dlMain: "Download Mirsa",
             heroSub: "Install apps on your iPhone directly, no computer needed.",
             heroLine: "An unlimited container, ready-made sources, signing with your own certificate, and automatic updates — all from inside your iPhone.",
             ctaMain: "Download Mirsa", ctaSec: "Latest Mirsa.ipa release",
@@ -1023,5 +1035,33 @@
         }
       })();
     </script>
-  </body>
+  <style>
+.mx-apps{max-width:960px;margin:0 auto;padding:0 16px;text-align:center}
+.mx-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:20px;text-align:start}
+.mx-card{padding:22px;border-radius:20px;display:flex;flex-direction:column;gap:10px}
+.mx-card h3{margin:0}.mx-card p{margin:0}
+.mx-ver{opacity:.85;min-height:1.4em;font-variant-numeric:tabular-nums}
+.mx-ver button{font:inherit;margin-inline-start:8px;cursor:pointer}
+.mx-dl{align-self:flex-start;text-decoration:none}
+.mx-dl[aria-disabled=true]{opacity:.45;pointer-events:none}
+</style>
+<script>
+(function(){
+var L={ar:{load:"جارٍ تحميل الإصدار…",ver:"الإصدار ",err:"تعذّر تحميل الإصدار",retry:"إعادة المحاولة"},en:{load:"Loading version…",ver:"Version ",err:"Couldn't load the version",retry:"Retry"}};
+function lang(){return document.documentElement.lang==="en"?"en":"ar"}
+var cards=[].slice.call(document.querySelectorAll(".mx-card")),state={};
+function safe(u){try{var x=new URL(u);return x.protocol==="https:"&&/(^|\.)(github\.com|githubusercontent\.com)$/.test(x.hostname)?x.href:null}catch(e){return null}}
+function digits(t){return lang()==="ar"?t.replace(/\d/g,function(c){return"٠١٢٣٤٥٦٧٨٩"[c]}):t}
+function render(){var d=L[lang()];cards.forEach(function(c){var id=c.dataset.app,st=state[id]||{k:"load"},v=c.querySelector(".mx-ver"),a=c.querySelector(".mx-dl");v.textContent="";
+if(st.k==="ok"){v.textContent=d.ver+st.v;a.href=st.u;a.removeAttribute("aria-disabled");a.rel="noopener"}
+else{a.setAttribute("aria-disabled","true");a.href="#apps";if(st.k==="load")v.textContent=d.load;else{v.textContent=d.err;var b=document.createElement("button");b.type="button";b.textContent=d.retry;b.onclick=load;v.appendChild(b)}}});}
+function load(){state={};render();fetch("source.json?t="+Date.now(),{cache:"no-store"}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(f){
+cards.forEach(function(c){var id=c.dataset.app,app=(f.apps||[]).filter(function(a){return a.bundleIdentifier===id})[0],u=app&&safe(app.downloadURL),v=app&&app.version;
+var top=app&&app.versions&&app.versions[0];if(top&&top.version){v=top.version;u=safe(top.downloadURL)||u}
+state[id]=(u&&v)?{k:"ok",v:String(v),u:u}:{k:"err"}});render()}).catch(function(){cards.forEach(function(c){state[c.dataset.app]={k:"err"}});render()})}
+new MutationObserver(render).observe(document.documentElement,{attributes:true,attributeFilter:["lang"]});
+load();
+})();
+</script>
+</body>
 </html>
