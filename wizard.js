@@ -22,21 +22,30 @@ en:[
 ["If the iPhone asks for Developer Mode, turn it on. Trust the profile in Settings › General › VPN & Device Management."]],
 [["Download Mirsa Setup with the button.","dls"],["Install it with any on-device signer such as ESign or Feather."],["Open “Mirsa Setup” and sign in with your Apple ID."],["Turn on LocalDevVPN and stay on Wi‑Fi."],["Tap Install and Setup installs the real Mirsa with your account."],["Done! Mirsa then updates itself."]],
 [["Download Mirsa.ipa with the button.","dl"],["Install it with an on-device signer such as ESign or Feather using your certificate."],["Certificate mode has no Container and some other features are unavailable."]]]};
+var os=null,OS={ar:{h:"اختر نظام الكمبيوتر",win:["ويندوز","Sideloadly"],mac:["ماك","Sideloadly"],lin:["لينكس","Sideloader"],dl:"تحميل Sideloadly",dl2:"تحميل Sideloader",cp:"نسخ",cpd:"تم النسخ",s:{sl:["حمّل Sideloadly من الموقع الرسمي.","ثبّته وافتحه."],sd:["ثبّت usbmuxd بهذا الأمر.","حمّل Sideloader من Dadoum وافتحه."]}},en:{h:"Choose your computer",win:["Windows","Sideloadly"],mac:["macOS","Sideloadly"],lin:["Linux","Sideloader"],dl:"Download Sideloadly",dl2:"Download Sideloader",cp:"Copy",cpd:"Copied",s:{sl:["Get Sideloadly from the official site.","Install it and open it."],sd:["Install usbmuxd with this command.","Get Sideloader by Dadoum and open it."]}}};
 var ov,lang=function(){return document.documentElement.lang==="en"?"en":"ar"},m=-1,s=0;
 function link(id){var a=document.querySelector('.mx-card[data-app="'+id+'"] .mx-dl');return a&&a.getAttribute("aria-disabled")!=="true"?a.href:null}
 function el(h){var d=document.createElement("div");d.innerHTML=h;return d.firstChild}
+function osBody(){var O=OS[lang()],h='<div class="mw-body"><p>'+O.h+'</p><div class="mw-os" role="group" aria-label="'+O.h+'">';
+["win","mac","lin"].forEach(function(k){h+='<button type="button" class="mw-osb'+(os===k?' on':'')+'" data-os="'+k+'" aria-pressed="'+(os===k)+'"><b>'+O[k][0]+'</b><small>'+O[k][1]+'</small></button>'});
+h+='</div>';
+if(os==="win"||os==="mac")h+='<ol class="mw-ms"><li>'+O.s.sl[0]+'</li><li>'+O.s.sl[1]+'</li></ol><a class="mw-dlb mw-sl" href="'+SL+'" target="_blank" rel="noopener">'+O.dl+'</a>';
+if(os==="lin")h+='<ol class="mw-ms"><li>'+O.s.sd[0]+'</li></ol><div class="mw-cb"><code class="mw-cmd" dir="ltr">sudo apt-get install usbmuxd</code><button type="button" class="mw-cp">'+O.cp+'</button></div><ol class="mw-ms" start="2"><li>'+O.s.sd[1]+'</li></ol><a class="mw-dlb mw-sl" href="'+SD+'" target="_blank" rel="noopener">'+O.dl2+'</a>';
+return h+'</div>'}
 function draw(){var L=D[lang()],w=ov.querySelector(".mw"),h="";
 var tot=m<0?1:P[lang()][m].length+1,cur=m<0?1:s+2;
 h+='<div class="mw-grab"></div><div class="mw-top"><h2 id="mw-t">'+L.t+'</h2><button class="mw-x" type="button" aria-label="'+L.close+'"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>';
 h+='<div class="mw-stp">'+(m<0?L.st1:L.st(s+2,tot))+'</div><div class="mw-bar"><i style="width:'+(m<0?6:Math.round(cur/tot*100))+'%"></i></div>';
 if(m<0){h+='<h3>'+L.pick+'</h3>';L.m.forEach(function(o,i){h+='<button class="mw-opt" type="button" data-m="'+i+'"><b><span class="mw-n">'+(i+1)+'</span>'+o.n+(o.b?' <span class="mw-b'+(o.o?' o':'')+'">'+o.b+'</span>':'')+'</b><small>'+o.d+'</small></b></button>'.replace('</b></button>','</button>')})}
 else{var st=P[lang()][m][s],last=s===P[lang()][m].length-1,u=st[1]==="dl"?link("com.alaa.mirsa"):st[1]==="dls"?link("com.alaa.mirsa.setup"):null;
-h+='<div class="mw-body"><p>'+st[0]+'</p></div><div class="mw-act"><button class="mw-bk" type="button">'+L.back+'</button>';
+h+=(m===0&&s===1)?osBody():'<div class="mw-body"><p>'+st[0]+'</p></div><div class="mw-act"><button class="mw-bk" type="button">'+L.back+'</button>';
 if(st[1])h+='<a class="mw-dlb" '+(u?'href="'+u+'" rel="noopener"':'aria-disabled="true"')+'>'+(st[1]==="dls"?L.dlS:L.dl)+'</a>';
 h+='<button class="mw-nx" type="button">'+(last?L.done:L.next)+'</button></div>'}
 w.innerHTML=h;
 w.querySelector(".mw-x").onclick=close;
 [].forEach.call(w.querySelectorAll(".mw-opt"),function(b){b.onclick=function(){m=+b.dataset.m;s=0;draw()}});
+[].forEach.call(w.querySelectorAll(".mw-osb"),function(b){b.onclick=function(){os=b.dataset.os;draw()}});
+var cp=w.querySelector(".mw-cp");if(cp)cp.onclick=function(){var c="sudo apt-get install usbmuxd",ok=function(){cp.textContent=OS[lang()].cpd};if(navigator.clipboard)navigator.clipboard.writeText(c).then(ok,ok);else ok()};
 var bk=w.querySelector(".mw-bk");if(bk)bk.onclick=function(){if(s>0)s--;else m=-1;draw()};
 var nx=w.querySelector(".mw-nx");if(nx)nx.onclick=function(){if(s<P[lang()][m].length-1){s++;draw()}else close()}}
 function open(e){if(e)e.preventDefault();m=-1;s=0;draw();ov.classList.add("is-open");document.body.style.overflow="hidden";ov.querySelector(".mw-x").focus()}
