@@ -31,3 +31,4 @@ html[data-theme=dark] .mw-b.o{color:#fbbf24}
 .mw-nx,.mw-dlb{background:linear-gradient(135deg,#3b82f6,#2563eb 55%,#6d28d9);color:#fff;border:0}
 .mw-dlb[aria-disabled=true]{opacity:.45;pointer-events:none}
 @media(prefers-reduced-motion:reduce){.mw,.mw-ov,.mw-bar i{transition:none}}
+.mw-cmd{display:block;text-align:left;direction:ltr;padding:8px 12px;border-radius:10px;font-size:.9rem}

@@ -8,7 +8,7 @@ var SL="https://sideloadly.io",SD="https://github.com/Dadoum/Sideloader";
 var P={
 ar:[
 [["وصّل الآيفون بالكمبيوتر بكيبل. أول مرة اضغط «وثوق بهذا الكمبيوتر» (Trust) على الآيفون.","dl"],
-["حمّل Sideloadly (ويندوز أو ماك) من الموقع الرسمي: <a href='"+SL+"' target='_blank' rel='noopener'>sideloadly.io</a> وافتحه. على لينكس استخدم بديلاً: <a href='"+SD+"' target='_blank' rel='noopener'>Sideloader</a> من Dadoum، وبيحتاج usbmuxd: <code>sudo apt-get install usbmuxd</code>"],
+["حمّل Sideloadly (ويندوز أو ماك) من الموقع الرسمي: <a href='"+SL+"' target='_blank' rel='noopener'>sideloadly.io</a> وافتحه. على لينكس استخدم بديلاً: <a href='"+SD+"' target='_blank' rel='noopener'>Sideloader</a> من Dadoum، وبيحتاج usbmuxd:</p><p><code class='mw-cmd'>sudo apt-get install usbmuxd</code>"],
 ["نزّل Mirsa.ipa من الزر وافتح Sideloadly، ثم اسحب الملف إلى نافذته.","dl"],
 ["اكتب إيميل Apple ID (أي حساب بيشتغل) واضغط Start."],
 ["إذا طلب الآيفون وضع المطوّر فعّله. وثق بالملف من الإعدادات › عام › VPN وإدارة الأجهزة."]],
@@ -16,7 +16,7 @@ ar:[
 [["حمّل Mirsa.ipa من الزر.","dl"],["ثبّته بموقّع على الآيفون مثل ESign أو Feather بشهادتك."],["وضع الشهادة ما فيه الحاوية ولا بعض المزايا الثانية."]]],
 en:[
 [["Connect your iPhone with a cable. The first time, tap Trust on the iPhone.","dl"],
-["Get Sideloadly (Windows or macOS) from the official site: <a href='"+SL+"' target='_blank' rel='noopener'>sideloadly.io</a> and open it. On Linux use <a href='"+SD+"' target='_blank' rel='noopener'>Sideloader</a> by Dadoum instead, which needs usbmuxd: <code>sudo apt-get install usbmuxd</code>"],
+["Get Sideloadly (Windows or macOS) from the official site: <a href='"+SL+"' target='_blank' rel='noopener'>sideloadly.io</a> and open it. On Linux use <a href='"+SD+"' target='_blank' rel='noopener'>Sideloader</a> by Dadoum instead, which needs usbmuxd:</p><p><code class='mw-cmd'>sudo apt-get install usbmuxd</code>"],
 ["Download Mirsa.ipa with the button and open Sideloadly, then drag the file into its window.","dl"],
 ["Enter your Apple ID email (any Apple ID works) and press Start."],
 ["If the iPhone asks for Developer Mode, turn it on. Trust the profile in Settings › General › VPN & Device Management."]],
@@ -27,7 +27,7 @@ function link(id){var a=document.querySelector('.mx-card[data-app="'+id+'"] .mx-
 function el(h){var d=document.createElement("div");d.innerHTML=h;return d.firstChild}
 function draw(){var L=D[lang()],w=ov.querySelector(".mw"),h="";
 var tot=m<0?1:P[lang()][m].length+1,cur=m<0?1:s+2;
-h+='<div class="mw-grab"></div><div class="mw-top"><h2 id="mw-t">'+L.t+'</h2><button class="mw-x" type="button" aria-label="'+L.close+'">✕</button></div>';
+h+='<div class="mw-grab"></div><div class="mw-top"><h2 id="mw-t">'+L.t+'</h2><button class="mw-x" type="button" aria-label="'+L.close+'"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>';
 h+='<div class="mw-stp">'+L.st(m<0?1:s+2,tot)+'</div><div class="mw-bar"><i style="width:'+Math.round(cur/tot*100)+'%"></i></div>';
 if(m<0){h+='<h3>'+L.pick+'</h3>';L.m.forEach(function(o,i){h+='<button class="mw-opt" type="button" data-m="'+i+'"><b><span class="mw-n">'+(i+1)+'</span>'+o.n+(o.b?' <span class="mw-b'+(o.o?' o':'')+'">'+o.b+'</span>':'')+'</b><small>'+o.d+'</small></b></button>'.replace('</b></button>','</button>')})}
 else{var st=P[lang()][m][s],last=s===P[lang()][m].length-1,u=st[1]==="dl"?link("com.alaa.mirsa"):st[1]==="dls"?link("com.alaa.mirsa.setup"):null;
@@ -46,5 +46,5 @@ ov.addEventListener("click",function(e){if(e.target===ov)close()});
 document.addEventListener("keydown",function(e){if(e.key==="Escape")close()});
 [].forEach.call(document.querySelectorAll('.x-actions a[href="#apps"]'),function(a){a.addEventListener("click",open)});
 new MutationObserver(function(){if(ov.classList.contains("is-open"))draw()}).observe(document.documentElement,{attributes:true,attributeFilter:["lang"]});
-if(location.hash==="#install-wizard")open()}
+if(location.hash==="#install-wizard")open();if(location.hash==="#install-wizard-pc"){open();m=0;s=1;draw()}}
 document.readyState==="loading"?document.addEventListener("DOMContentLoaded",init):init()})();
