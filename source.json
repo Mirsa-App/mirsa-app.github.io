@@ -147,32 +147,32 @@
       "developerName": "Alaa",
       "iconURL": "https://github.com/Alaaaya/Mirsa/releases/download/setup/Mirsa.png",
       "localizedDescription": "Mirsa. Requires signing by your installer.",
-      "version": "2.9.1",
-      "versionDate": "2026-11-18T23:57:10Z",
-      "downloadURL": "https://github.com/Alaaaya/Mirsa-iOS/releases/download/2.9.1/Mirsa.ipa",
-      "size": 29628227,
+      "version": "2.9.2",
+      "versionDate": "2026-11-19T18:01:05Z",
+      "downloadURL": "https://github.com/Alaaaya/Mirsa-iOS/releases/download/2.9.2/Mirsa.ipa",
+      "size": 29709470,
       "versions": [
         {
-          "version": "2.9.1",
-          "buildVersion": "6.90.1",
-          "date": "2026-11-18T23:57:10Z",
-          "downloadURL": "https://github.com/Alaaaya/Mirsa-iOS/releases/download/2.9.1/Mirsa.ipa",
-          "size": 29628227,
+          "version": "2.9.2",
+          "buildVersion": "6.94.1",
+          "date": "2026-11-19T18:01:05Z",
+          "downloadURL": "https://github.com/Alaaaya/Mirsa-iOS/releases/download/2.9.2/Mirsa.ipa",
+          "size": 29709470,
           "releaseNotes": {
-            "ar": "بمرسى 2.9.1 صلّحت زر الصور عند تغيير أيقونة التطبيق بالتوقيع بالشهادة، وصار يفتح منتقي الصور. ضفت خيار إزالة ملف mobileprovision بعد التوقيع، والخيار بيضل اختياري. رتّبت أسماء تأثيرات الخلفيات بأسماء واضحة بالعربي وباقي لغات التطبيق، وخفيت الخيارات الداخلية من القائمة حتى ما تتكرر أو تربك الاستخدام. هالنسخة بتجمع الإصلاحات التلاتة، بدون تغيير نسخة Setup أو المشغّل.",
-            "en": "In Mirsa 2.9.1 I fixed the Photos button when changing an app icon during certificate signing, so it opens the photo picker. I added an optional setting to remove the mobileprovision file after signing. Wallpaper effects now have readable names in the supported languages, and internal-only entries are hidden from the list. This update combines all three fixes without changing Setup or the player.",
-            "de": "In Mirsa 2.9.1 habe ich die Fotos-Taste beim Ändern eines App-Symbols für die Zertifikatsignierung repariert. Sie öffnet jetzt die Fotoauswahl. Eine neue, optionale Einstellung entfernt die mobileprovision-Datei nach dem Signieren. Die Hintergrundeffekte haben verständliche Namen in den unterstützten Sprachen; interne Einträge bleiben ausgeblendet. Setup und der Player bleiben unverändert.",
-            "kmr": "Di Mirsa 2.9.1 de min bişkojka Wêneyan sererast kir, dema ku tu ji bo îmzekirina bi sertîfîkayê îkona sepanê diguherînî. Hilbijartina wêneyan niha vedibe. Vebijarkek nû û ne mecbûrî dikare piştî îmzekirinê pelê mobileprovision rake. Navên efektên paşxaneyê di zimanên piştgirîkirî de zelaltir in û efektên hundirîn nayên nîşandan. Ev nûkirin sê sererastkirinan dicivîne; Setup û lîstikvan naguherin.",
-            "ckb": "لە Mirsa 2.9.1 دوگمەی وێنەکانم چاک کرد کاتێک ئایکۆنی ئەپ بۆ واژۆکردن بە بڕوانامە دەگۆڕیت، ئێستا هەڵبژاردنی وێنە دەکرێتەوە. هەڵبژاردەیەکی ئارەزوومەندانەم زیاد کرد بۆ سڕینەوەی فایلی mobileprovision دوای واژۆکردن. ناوی کاریگەرییەکانی پاشبنەما لە زمانە پشتگیریکراوەکان ڕوونتر کراون و هەڵبژاردە ناوخۆییەکان شاردراونەتەوە. ئەم نوێکردنەوەیە هەرسێ چاککردنەوەکە کۆدەکاتەوە؛ Setup و پەخشکەر ناگۆڕێن."
+            "ar": "بهالتحديث غيّرت شكل الشريط السفلي وخليته زجاجي وعائم، وزر مرسى AI صار دائري لحاله جنب الشريط.\n\nكمان جدّدت تصميم محادثة مرسى AI، مع كرات بنفسجية متحركة بهدوء بالخلفية. صار في تلات أشكال للمحادثة، نهاري وليلي ومرسى الكلاسيكي، وبتقدر تختار اللي بناسبك من إعدادات المحادثة. الترويسة شفافة بالكامل، بدون تدرّج فوق الكلام.\n\nأضفت كرة تقدّم سائلة للتنزيل والتوقيع والتثبيت، بتبيّن التقدّم فوق التطبيق، ولما توصل 100% بتطلع لمعة وشرارات صغيرة.\n\nاستيراد ملفات IPA صار يقبل لحد 4GB. قبل الاستيراد مرسى بيتأكد إنو في مساحة كافية، وإذا الملف كبير زيادة أو المساحة ما بتكفي، بتطلع رسالة واضحة ومترجمة بدل الخطأ المبهم.",
+            "en": "I changed the bottom bar to a floating glass design and gave Mirsa AI its own separate round button.\n\nThe AI chat has a new design with gently breathing purple orbs. Choose Day, Night or Mirsa Classic in chat settings. The header stays fully transparent, without a top fade.\n\nA liquid progress orb now shows download, signing and installation progress across the app, with a sparkle finish at 100%.\n\nIPA imports now accept files up to 4GB. Mirsa checks available space before importing and shows translated errors for oversized files or insufficient storage.",
+            "de": "Die untere Leiste hat jetzt ein schwebendes Glasdesign. Mirsa AI hat daneben einen eigenen runden Button.\n\nDen AI-Chat habe ich mit sanft pulsierenden violetten Kugeln neu gestaltet. In den Chat-Einstellungen gibt es Tag, Nacht und Mirsa Klassisch. Die Kopfzeile bleibt komplett transparent, ohne Verlauf am oberen Rand.\n\nEine flüssige Fortschrittskugel zeigt Downloads, Signieren und Installation über der App an. Bei 100 % erscheinen kleine Funken.\n\nIPA-Dateien lassen sich jetzt bis 4GB importieren. Mirsa prüft vorher den freien Speicher und zeigt übersetzte Fehlermeldungen bei zu großen Dateien oder zu wenig Platz.",
+            "kmr": "Min bara jêrîn bi şêwazeke şûşeyî û avjen nû kir. Mirsa AI niha li kêleka wê bişkokeke girover a serbixwe heye.\n\nDîzayna sohbetê bi topên mor ên ku hêdî diherikin nû bû. Ji mîhengên sohbetê Roj, Şev an Mirsa Klasîk hilbijêrin. Sernav bi tevahî şefaf e, bê tarîbûna jorîn.\n\nTopeke pêşketinê ya şil pêşketina daxistinê, îmzekirinê û sazkirinê li ser sepanê nîşan dide. Li 100% çirûskên biçûk derdikevin.\n\nNiha dosyeyên IPA heta 4GB tên têxistin. Mirsa berî têxistinê cihê vala kontrol dike û ji bo dosyeyên pir mezin an kêmbûna cihê peyamên wergerandî nîşan dide.",
+            "ckb": "شریتی خوارەوەم کرد بە دیزاینێکی شووشەیی و هەڵواسراو، دوگمەی مرسى AIش بوو بە دوگمەیەکی بازنەیی سەربەخۆ لە تەنیشتی.\n\nدیزاینی چاتی مرسى AI نوێ بووەوە بە تۆپە مۆرەکان کە بە هێواشی دەجوڵێن. لە ڕێکخستنەکانی چات دەتوانن ڕۆژانە، شەوانە یان مرسى کلاسیکی هەڵبژێرن. سەرپەڕەکە بە تەواوی ڕوونە و هیچ تاریکبوونەوەیەکی لە سەرەوە نییە.\n\nتۆپێکی شلی پێشکەوتنم زیاد کردووە بۆ داگرتن و واژۆکردن و دامەزراندن، لەسەر ئەپەکە دەردەکەوێت و کە دەگاتە 100% تیشک و چرووسکەی بچووک دەردەکەون.\n\nهاوردەکردنی فایلی IPA ئێستا تا 4GB وەردەگرێت. مرسى پێش هاوردەکردن بۆشایی بەردەست دەپشکنێت، ئەگەر فایلەکە زۆر گەورە بێت یان بۆشایی بەس نەبێت، پەیامی وەرگێڕدراو و ڕوون پیشان دەدات."
           },
-          "localizedDescription": "Mirsa 2.9.1",
+          "localizedDescription": "Mirsa 2.9.2",
           "minOSVersion": "18.0",
-          "sourceURL": "https://github.com/Alaaaya/Mirsa-iOS/releases/download/2.9.1/Mirsa-2.9.1-source.tar.gz",
-          "sourceSHA256": "5f338de6d04acf422da42adf5c12f4c642abffa84e634afb1699e0c321211dec"
+          "sourceURL": "https://github.com/Alaaaya/Mirsa-iOS/releases/download/2.9.2/Mirsa-2.9.2-source.tar.gz",
+          "sourceSHA256": "0fde4dca9f1b2fb7e693926a66bee13f361febd0c1a86030a7d463d898566b01"
         }
       ],
-      "sourceURL": "https://github.com/Alaaaya/Mirsa-iOS/releases/download/2.9.1/Mirsa-2.9.1-source.tar.gz",
-      "sourceSHA256": "5f338de6d04acf422da42adf5c12f4c642abffa84e634afb1699e0c321211dec",
+      "sourceURL": "https://github.com/Alaaaya/Mirsa-iOS/releases/download/2.9.2/Mirsa-2.9.2-source.tar.gz",
+      "sourceSHA256": "0fde4dca9f1b2fb7e693926a66bee13f361febd0c1a86030a7d463d898566b01",
       "license": "GPL-3.0",
       "screenshotURLs": [
         "https://raw.githubusercontent.com/Alaaaya/Mirsa/main/assets/branding/ar-home.jpg",
