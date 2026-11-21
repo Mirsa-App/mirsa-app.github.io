@@ -8,32 +8,32 @@
       "developerName": "Alaa",
       "iconURL": "https://github.com/Alaaaya/Mirsa/releases/download/setup/Mirsa.png",
       "localizedDescription": "Mirsa. Requires signing by your installer.",
-      "version": "2.9.4",
-      "versionDate": "2026-11-20T03:28:44Z",
-      "downloadURL": "https://github.com/Alaaaya/Mirsa-iOS/releases/download/2.9.4/Mirsa.ipa",
-      "size": 29978577,
+      "version": "2.9.5",
+      "versionDate": "2026-11-21T19:36:12Z",
+      "downloadURL": "https://github.com/Alaaaya/Mirsa-iOS/releases/download/2.9.5/Mirsa.ipa",
+      "size": 30715322,
       "versions": [
         {
-          "version": "2.9.4",
-          "buildVersion": "7.3.1",
-          "date": "2026-11-20T03:28:44Z",
-          "downloadURL": "https://github.com/Alaaaya/Mirsa-iOS/releases/download/2.9.4/Mirsa.ipa",
-          "size": 29978577,
+          "version": "2.9.5",
+          "buildVersion": "8.534.1",
+          "date": "2026-11-21T19:36:12Z",
+          "downloadURL": "https://github.com/Alaaaya/Mirsa-iOS/releases/download/2.9.5/Mirsa.ipa",
+          "size": 30715322,
           "releaseNotes": {
-            "ar": "بهالتحديث غيّرت شكل المتجر بالكامل، وصار بتصميم «معرض». صفحة اكتشف صارت تعرض التطبيقات بشكل جديد، ومعها صفحات البحث وتفاصيل التطبيق والتنزيلات والحساب بنفس التصميم. شريط المتجر صار كبسولة زجاجية فوق شريط مرسى الأساسي، فيك تتنقل بين أقسام المتجر وشريط مرسى بيضل ظاهر.\n\nشلت قسم الأخبار من صفحة المصادر، المصادر نفسها بعدها موجودة وبتشتغل متل قبل. باقي شغل مرسى ما تغيّر بهالنسخة. التصميم والنصوص موجودين بالعربي والإنكليزي والألماني والكردي الكرمانجي والسوراني.\n\nأضفت Alaa IPA وAlaa IPA 2 تلقائياً للمستخدمين الجدد والحاليين، من دون حذف مصادرك الخاصة أو تكرار نفس الرابط. تحميل وفك بيانات المصادر الكبيرة بيصير بالخلفية بعيداً عن واجهة التطبيق، وتحديث عدد التطبيقات بينحفظ دفعة واحدة.",
-            "en": "I rebuilt the store around the new Gallery design. Discover, search, app details, downloads and account now share the new layout. The store tabs sit in a glass capsule above the main Mirsa dock, so both navigation bars stay visible.\n\nI removed the news section from Sources. Your sources are still there and work as before; this release does not change the rest of Mirsa. The design and text cover Arabic, English, German, Kurdish Kurmanji and Kurdish Sorani.\n\nAlaa IPA and Alaa IPA 2 are now added automatically for new and existing users, preserving custom sources and avoiding duplicate URLs. Large catalogues download asynchronously and decode off the UI thread, with source metadata saved in one batch.",
-            "de": "Ich habe den Store mit dem neuen Galerie-Design neu gestaltet. Entdecken, Suche, App-Details, Downloads und Konto haben jetzt das neue Layout. Die Store-Tabs liegen in einer Glaskapsel über dem normalen Mirsa-Dock, beide Navigationsleisten bleiben sichtbar.\n\nDen Nachrichtenbereich auf der Quellen-Seite habe ich entfernt. Die Quellen bleiben erhalten und funktionieren wie bisher. Der Rest von Mirsa bleibt in dieser Version unverändert. Das Design und die Texte gibt es auf Arabisch, Englisch, Deutsch, Kurmandschi und Sorani.\n\nAlaa IPA und Alaa IPA 2 werden für neue und bestehende Nutzer automatisch ergänzt. Eigene Quellen bleiben erhalten, doppelte URLs werden nicht hinzugefügt. Große Kataloge werden asynchron geladen und außerhalb des UI-Threads verarbeitet; ihre Metadaten werden gesammelt gespeichert.",
-            "kmr": "Di vê guhertoyê de min dîzana firoşgehê bi dîzana nû ya Galerî nû kir. Rûpelên keşfkirinê, lêgerînê, hûrguliyên sepanê, daxistinan û hesabê niha heman dîzana nû bi kar tînin. Tabên firoşgehê di kapsûleke şûşeyî de li ser docka sereke ya Mirsa ne, her du barên gerokê xuya dimînin.\n\nMin beşa nûçeyan ji rûpela çavkaniyan rakir. Çavkanî wek berê dimînin û kar dikin. Ti guherînek din di Mirsa de tune ye. Dîzan û nivîs bi Erebî, Îngilîzî, Almanî, Kurmancî û Soranî hene.\n\nAlaa IPA û Alaa IPA 2 ji bo bikarhênerên nû û heyî bixweber tên zêdekirin. Çavkaniyên we tên parastin û heman URL dubare nayê zêdekirin. Katalogên mezin bi awayekî asînkron tên daxistin û li derveyî thread-a rûkarê tên xwendin; metadata bi hev re tê tomarkirin.",
-            "ckb": "لەم وەشانەدا دیزاینی فرۆشگام بە دیزاینی نوێی گەلەری گۆڕی. لاپەڕەکانی دۆزینەوە، گەڕان، وردەکاری ئەپ، داگرتنەکان و هەژمار هەموویان دیزاینی نوێیان هەیە. بەشەکانی فرۆشگا لە کەپسوولێکی شووشەییدان لە سەرەوەی شریتی سەرەکی میرسە، هەردوو شریتەکە دەبینرێن.\n\nبەشی هەواڵم لە لاپەڕەی سەرچاوەکان لابرد. سەرچاوەکان هەر ماون و وەک پێشوو کار دەکەن. بەشەکانی دیکەی میرسە لەم وەشانەدا نەگۆڕاون. دیزاین و دەقەکان بە عەرەبی، ئینگلیزی، ئەڵمانی، کورمانجی و سۆرانی بەردەستن.\n\nAlaa IPA و Alaa IPA 2 بۆ بەکارهێنەرانی نوێ و ئێستا خۆکار زیاد دەکرێن. سەرچاوە تایبەتەکانتان دەپارێزرێن و هەمان بەستەر دووبارە زیاد ناکرێت. کاتەلۆگە گەورەکان لە پشتەوە دادەگیرێن و داتاکانیان لە دەرەوەی threadی ڕووکار دەخوێندرێنەوە؛ زانیاریی سەرچاوە یەکجار پاشەکەوت دەکرێت."
+            "ar": "صفحة تفاصيل المشروع صارت أبسط، مع سجل تثبيت مباشر. أصلحت توقيع مكونات Watch، وأضفت معاينات لعناصر المتجر. المكتبات الموجودة صارت مطوية افتراضياً، والقائمة بتعرض ملفات dylib وتويكات deb فقط.",
+            "en": "Simplified project details with a live installation log. Fixed signing of embedded Watch components and added store previews. Existing libraries are collapsed by default; the list shows standalone dylib files and deb tweaks only.",
+            "de": "Vereinfachte Projektdetails mit Live-Installationsprotokoll. Die Signierung eingebetteter Watch-Komponenten wurde korrigiert und Store-Vorschauen wurden ergänzt. Vorhandene Bibliotheken sind standardmäßig eingeklappt; die Liste zeigt nur eigenständige dylib-Dateien und deb-Tweaks.",
+            "kmr": "Hûrguliyên projeyê bi tomara zindî ya sazkirinê hêsantir bûn. Îmzekirina pêkhateyên Watch hat sererastkirin û pêşdîtinên firoşgehê hatin zêdekirin. Pirtûkxaneyên heyî di destpêkê de girtî ne; lîste tenê pelên dylib yên serbixwe û tweakên deb nîşan dide.",
+            "ckb": "وردەکارییەکانی پڕۆژە سادەتر کراون لەگەڵ تۆماری ڕاستەوخۆی دامەزراندن. واژۆکردنی پێکهاتەکانی Watch چاک کراوە و پێشبینینی فرۆشگا زیاد کراوە. کتێبخانە هەبووەکان بە بنەڕەت داخراون؛ لیستەکە تەنها فایلە سەربەخۆکانی dylib و تویکەکانی deb پیشان دەدات."
           },
-          "localizedDescription": "Mirsa 2.9.4",
+          "localizedDescription": "Mirsa 2.9.5",
           "minOSVersion": "18.0",
-          "sourceURL": "https://github.com/Alaaaya/Mirsa-iOS/releases/download/2.9.4/Mirsa-2.9.4-source.tar.gz",
-          "sourceSHA256": "0e863950c24dabd78ed16cd3cdcd895352ad17e557017d6a19fa7a9e29472231"
+          "sourceURL": "https://github.com/Alaaaya/Mirsa-iOS/releases/download/2.9.5/Mirsa-2.9.5-source.tar.gz",
+          "sourceSHA256": "f0a092f3819a172e60f01ddca38fcb4995a92b87bda5b1e8acb81a82af9d6f61"
         }
       ],
-      "sourceURL": "https://github.com/Alaaaya/Mirsa-iOS/releases/download/2.9.4/Mirsa-2.9.4-source.tar.gz",
-      "sourceSHA256": "0e863950c24dabd78ed16cd3cdcd895352ad17e557017d6a19fa7a9e29472231",
+      "sourceURL": "https://github.com/Alaaaya/Mirsa-iOS/releases/download/2.9.5/Mirsa-2.9.5-source.tar.gz",
+      "sourceSHA256": "f0a092f3819a172e60f01ddca38fcb4995a92b87bda5b1e8acb81a82af9d6f61",
       "license": "GPL-3.0",
       "screenshotURLs": [
         "https://raw.githubusercontent.com/Alaaaya/Mirsa/main/assets/branding/ar-home.jpg",
