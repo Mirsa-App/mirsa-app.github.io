@@ -8,32 +8,32 @@
       "developerName": "Alaa",
       "iconURL": "https://github.com/Alaaaya/Mirsa/releases/download/setup/Mirsa.png",
       "localizedDescription": "Mirsa. Requires signing by your installer.",
-      "version": "2.9.5",
-      "versionDate": "2026-11-21T19:36:12Z",
-      "downloadURL": "https://github.com/Alaaaya/Mirsa-iOS/releases/download/2.9.5/Mirsa.ipa",
-      "size": 30715322,
+      "version": "2.9.6",
+      "versionDate": "2026-11-22T00:14:19Z",
+      "downloadURL": "https://github.com/Alaaaya/Mirsa-iOS/releases/download/2.9.6/Mirsa.ipa",
+      "size": 30783306,
       "versions": [
         {
-          "version": "2.9.5",
-          "buildVersion": "8.534.1",
-          "date": "2026-11-21T19:36:12Z",
-          "downloadURL": "https://github.com/Alaaaya/Mirsa-iOS/releases/download/2.9.5/Mirsa.ipa",
-          "size": 30715322,
+          "version": "2.9.6",
+          "buildVersion": "8.536.1",
+          "date": "2026-11-22T00:14:19Z",
+          "downloadURL": "https://github.com/Alaaaya/Mirsa-iOS/releases/download/2.9.6/Mirsa.ipa",
+          "size": 30783306,
           "releaseNotes": {
-            "ar": "صفحة تفاصيل المشروع صارت أبسط، مع سجل تثبيت مباشر. أصلحت توقيع مكونات Watch، وأضفت معاينات لعناصر المتجر. المكتبات الموجودة صارت مطوية افتراضياً، والقائمة بتعرض ملفات dylib وتويكات deb فقط.",
-            "en": "Simplified project details with a live installation log. Fixed signing of embedded Watch components and added store previews. Existing libraries are collapsed by default; the list shows standalone dylib files and deb tweaks only.",
-            "de": "Vereinfachte Projektdetails mit Live-Installationsprotokoll. Die Signierung eingebetteter Watch-Komponenten wurde korrigiert und Store-Vorschauen wurden ergänzt. Vorhandene Bibliotheken sind standardmäßig eingeklappt; die Liste zeigt nur eigenständige dylib-Dateien und deb-Tweaks.",
-            "kmr": "Hûrguliyên projeyê bi tomara zindî ya sazkirinê hêsantir bûn. Îmzekirina pêkhateyên Watch hat sererastkirin û pêşdîtinên firoşgehê hatin zêdekirin. Pirtûkxaneyên heyî di destpêkê de girtî ne; lîste tenê pelên dylib yên serbixwe û tweakên deb nîşan dide.",
-            "ckb": "وردەکارییەکانی پڕۆژە سادەتر کراون لەگەڵ تۆماری ڕاستەوخۆی دامەزراندن. واژۆکردنی پێکهاتەکانی Watch چاک کراوە و پێشبینینی فرۆشگا زیاد کراوە. کتێبخانە هەبووەکان بە بنەڕەت داخراون؛ لیستەکە تەنها فایلە سەربەخۆکانی dylib و تویکەکانی deb پیشان دەدات."
+            "ar": "فتح LocalDevVPN والعودة تلقائياً إلى مرسى مع إعادة محاولة العملية. إضافة مشاركة ملفات dylib وdeb الموجودة مسبقاً، وتحسين خلفيات الثيمات وإظهار آخر صف فوق شريط التنقل.",
+            "en": "Open LocalDevVPN and return automatically to Mirsa, then retry the operation. Share existing dylib and deb files. Improved edge-to-edge theme backgrounds and bottom-row clearance above the tab bar.",
+            "de": "LocalDevVPN öffnen, automatisch zu Mirsa zurückkehren und den Vorgang erneut versuchen. Vorhandene dylib- und deb-Dateien teilen. Verbesserte randlose Theme-Hintergründe und Abstand der letzten Zeile zur Navigation.",
+            "kmr": "LocalDevVPN veke û bixwe vegere Mirsa, paşê karê dîsa biceribîne. Pelên dylib û deb yên heyî parve bike. Paşxaneyên temayan û dûrahiya rêza dawî ji şirîta navîgasyonê hatin baştirkirin.",
+            "ckb": "کردنەوەی LocalDevVPN و گەڕانەوەی خۆکار بۆ مرسا و دووبارە هەوڵدانەوە. هاوبەشکردنی فایلەکانی dylib و deb کە پێشتر هەن. باشترکردنی پاشبنەمای ڕووکارەکان و بۆشایی ڕیزی کۆتایی لەسەر شریتی گەڕان."
           },
-          "localizedDescription": "Mirsa 2.9.5",
+          "localizedDescription": "Mirsa 2.9.6",
           "minOSVersion": "18.0",
-          "sourceURL": "https://github.com/Alaaaya/Mirsa-iOS/releases/download/2.9.5/Mirsa-2.9.5-source.tar.gz",
-          "sourceSHA256": "f0a092f3819a172e60f01ddca38fcb4995a92b87bda5b1e8acb81a82af9d6f61"
+          "sourceURL": "https://github.com/Alaaaya/Mirsa-iOS/releases/download/2.9.6/Mirsa-2.9.6-source.tar.gz",
+          "sourceSHA256": "c09d620f167139c97d31a8721b4b3ef0ad586bb165c5658cda83be76973182c0"
         }
       ],
-      "sourceURL": "https://github.com/Alaaaya/Mirsa-iOS/releases/download/2.9.5/Mirsa-2.9.5-source.tar.gz",
-      "sourceSHA256": "f0a092f3819a172e60f01ddca38fcb4995a92b87bda5b1e8acb81a82af9d6f61",
+      "sourceURL": "https://github.com/Alaaaya/Mirsa-iOS/releases/download/2.9.6/Mirsa-2.9.6-source.tar.gz",
+      "sourceSHA256": "c09d620f167139c97d31a8721b4b3ef0ad586bb165c5658cda83be76973182c0",
       "license": "GPL-3.0",
       "screenshotURLs": [
         "https://raw.githubusercontent.com/Alaaaya/Mirsa/main/assets/branding/ar-home.jpg",
