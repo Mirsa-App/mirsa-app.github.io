@@ -3,7 +3,7 @@ const hero=document.getElementById("x3d"),cv=document.getElementById("x3d-c");
 const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
 let r;try{r=new THREE.WebGLRenderer({canvas:cv,antialias:false,alpha:true,powerPreference:"high-performance"})}catch(e){}
 if(!r||reduce||!hero){r&&r.dispose()}else{
-let PR=Math.min(devicePixelRatio,2);r.setPixelRatio(PR);r.outputColorSpace=THREE.SRGBColorSpace;r.toneMapping=THREE.ACESFilmicToneMapping;r.toneMappingExposure=1.05;const pm=new THREE.PMREMGenerator(r);const envT=pm.fromScene(new RoomEnvironment(),.04).texture;
+let PR=Math.min(devicePixelRatio,2);r.setPixelRatio(PR);r.outputColorSpace=THREE.SRGBColorSpace;r.toneMapping=THREE.ACESFilmicToneMapping;r.toneMappingExposure=1.3;const pm=new THREE.PMREMGenerator(r);const envT=pm.fromScene(new RoomEnvironment(),.04).texture;
 const sc=new THREE.Scene();sc.environment=envT;const cam=new THREE.PerspectiveCamera(40,1,.1,60);
 sc.add(new THREE.AmbientLight(0x9a8cff,.9));
 const l1=new THREE.PointLight(0x2dd4bf,90,40);l1.position.set(5,3,6);sc.add(l1);
@@ -16,7 +16,7 @@ const glowTex=tex((g,s)=>{const k=g.createRadialGradient(s/2,s/2,0,s/2,s/2,s/2);
 const sh=new THREE.Shape();sh.absarc(0,0,1.25,0,Math.PI*2,false);
 const hole=new THREE.Path();hole.absarc(.52,.26,1.04,0,Math.PI*2,true);sh.holes.push(hole);
 const geo=new THREE.ExtrudeGeometry(sh,{depth:.34,bevelEnabled:true,bevelSize:.08,bevelThickness:.08,bevelSegments:5,curveSegments:96});geo.center();
-const moon=new THREE.Mesh(geo,new THREE.MeshPhysicalMaterial({color:0xffc94d,metalness:1,roughness:.1,clearcoat:.6,clearcoatRoughness:.08,envMapIntensity:2.2,emissive:0x5a3600,emissiveIntensity:.35}));
+const moon=new THREE.Mesh(geo,new THREE.MeshPhysicalMaterial({color:0xffc94d,metalness:1,roughness:.1,clearcoat:.6,clearcoatRoughness:.08,envMapIntensity:2.2,emissive:0x5a3600,emissiveIntensity:.55}));
 moon.rotation.z=.55;world.add(moon);
 function glow(col,sc_,op){const m=new THREE.Sprite(new THREE.SpriteMaterial({map:glowTex,color:col,transparent:true,opacity:op,blending:THREE.AdditiveBlending,depthWrite:false}));m.scale.set(sc_,sc_,1);return m}
 const g1=glow(0xffb84d,3.4,.3),g2=glow(0x8b5cf6,7,.22),g3=glow(0x2dd4bf,10,.08);g1.position.z=-.4;g2.position.z=-1.2;g3.position.z=-2;world.add(g1,g2,g3);
