@@ -52,7 +52,7 @@ const N=220,pp=new Float32Array(N*3);for(let i=0;i<N;i++){pp[i*3]=(Math.random()
 const pg=new THREE.BufferGeometry();pg.setAttribute("position",new THREE.BufferAttribute(pp,3));
 const pts=new THREE.Points(pg,new THREE.PointsMaterial({map:glowTex,color:0xc4b5fd,size:.12,transparent:true,opacity:.55,blending:THREE.AdditiveBlending,depthWrite:false,sizeAttenuation:true}));sc.add(pts);
 let W=1,H=1,camZ=15;
-function size(){W=hero.clientWidth||1;H=hero.clientHeight||1;r.setSize(W,H,false);cam.aspect=W/H;camZ=Math.min(19,Math.max(11,9.6/(2*Math.tan(20*Math.PI/180)*cam.aspect)));cam.updateProjectionMatrix()}
+function size(){W=hero.clientWidth||1;H=hero.clientHeight||1;r.setSize(W,H,false);cam.aspect=W/H;camZ=Math.min(19,Math.max(11,8.4/(2*Math.tan(20*Math.PI/180)*cam.aspect)));cam.updateProjectionMatrix()}
 size();addEventListener("resize",size);new ResizeObserver(size).observe(hero);
 let tx=0,ty=0,cx=0,cy=0,vis=true,raf=0;
 addEventListener("pointermove",e=>{tx=(e.clientX/innerWidth-.5)*2;ty=(e.clientY/innerHeight-.5)*2});
