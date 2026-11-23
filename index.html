@@ -21,6 +21,16 @@
     />
     <link rel="stylesheet" href="hark.css" />
     <link rel="stylesheet" href="hark-hero.css" />
+<style>
+/* 3D hero stage: replaces the phone mockup only while WebGL runs; otherwise the phone stays as the static fallback */
+.x-stage{display:none;position:relative;width:100%;height:clamp(400px,58vw,600px);direction:ltr}
+.x-stage canvas{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:pan-y}
+html.x3d-on .x-stage{display:block}
+html.x3d-on .x-phone{display:none}
+@media (max-width:640px){.x-stage{height:min(112vw,470px)}}
+</style>
+<script type="importmap">{"imports":{"three":"./three.module.min.js"}}</script>
+
     <style>
       /* ================= SOFT design (light neumorphic clay) ================= */
       /* ---------- clay design tokens (light) ---------- */
@@ -674,6 +684,7 @@
           </div>
           <div class="x-phonewrap">
             <img class="x-hero__bg" src="mirsa-hero.png" alt="" />
+            <div class="x-stage" id="x3d" aria-hidden="true"><canvas id="x3d-c"></canvas></div>
             <div class="x-phone" role="img" aria-label="معاينة شاشة مرسى الرئيسية" data-i-aria="phoneAria">
               <div class="x-screen" aria-hidden="true">
                 <div class="x-status"><b>9:41</b><i></i><b>●●●</b></div>
@@ -1082,5 +1093,6 @@ load();
 })();
 </script>
 <script src="wizard.js"></script>
+<script>addEventListener("load",function(){setTimeout(function(){var m=document.createElement("script");m.type="module";m.src="hero3d.js";document.body.appendChild(m)},300)})</script>
 </body>
 </html>
