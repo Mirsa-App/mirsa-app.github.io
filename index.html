@@ -28,7 +28,15 @@
 html.x3d-on .x-stage{display:block}
 html.x3d-on .x-phone{display:none}
 html.x3d-on .x-phonewrap{width:100%;min-width:0}
-@media (max-width:640px){.x-stage{height:min(112vw,470px)}}
+.x-stage{background:radial-gradient(closest-side,rgba(139,92,246,.35),transparent 70%) center/70% 70% no-repeat}
+.x-stage::before{content:"";position:absolute;left:50%;top:50%;width:min(34%,150px);aspect-ratio:1;transform:translate(-50%,-50%);border-radius:24%;background:url(mirsa-icon-256.webp) center/cover;box-shadow:0 0 70px rgba(139,92,246,.7);transition:opacity .6s}
+html.x3d-on .x-stage::before{opacity:0}
+html .x-stage{display:block}
+html.x3d-on .x-phone,.x-phone{display:none}
+@media (max-width:640px){.x-stage{height:min(78vw,320px)}
+ html[data-design] .x-hero{padding-top:78px;gap:6px}
+ html[data-design] .x-phonewrap{order:-1;margin-top:-8px}
+ html[data-design] .x-iconwrap,html[data-design] .x-hero__line{display:none}}
 </style>
 <script type="importmap">{"imports":{"three":"./three.module.min.js"}}</script>
 
@@ -646,7 +654,7 @@ html.x3d-on .x-phonewrap{width:100%;min-width:0}
     <div class="x-sky" aria-hidden="true"><span class="x-orb x-orb--1"></span><span class="x-orb x-orb--2"></span><span class="x-orb x-orb--3"></span><span class="x-orb x-orb--4"></span></div>
 
     <nav class="x-nav x-glass" aria-label="Main">
-      <a class="x-nav__brand" href="#top"><img src="mirsa-icon.png" alt="" /><span data-i="brand">مرسى</span></a>
+      <a class="x-nav__brand" href="#top"><img src="mirsa-icon-256.webp" alt="" /><span data-i="brand">مرسى</span></a>
       <div class="x-nav__links">
         <a href="#features" data-i="nFeat">المزايا</a>
         <a href="#whats" data-i="nWhats">شو في بمرسى</a>
@@ -671,7 +679,7 @@ html.x3d-on .x-phonewrap{width:100%;min-width:0}
       <main class="main">
         <section class="x-hero">
           <div class="x-hero__copy">
-            <div class="x-iconwrap"><img class="x-icon" src="mirsa-icon.png" alt="أيقونة تطبيق مرسى" data-i-alt="iconAlt" /></div>
+            <div class="x-iconwrap"><img class="x-icon" src="mirsa-icon-256.webp" alt="أيقونة تطبيق مرسى" data-i-alt="iconAlt" /></div>
             <h1 class="x-shimmer" data-i="title">مرسى</h1>
             <p class="x-hero__sub" data-i="heroSub">ثبّت تطبيقاتك على الآيفون. على iOS 27 بدون كمبيوتر، وعلى النسخ الأقدم بدك كمبيوتر للإعداد.</p>
             <p class="x-hero__line" data-i="heroLine">حاوية بلا حدود، سورسات جاهزة، توقيع بشهادتك، وتحديثات تلقائية.</p>
@@ -684,12 +692,12 @@ html.x3d-on .x-phonewrap{width:100%;min-width:0}
             </ul>
           </div>
           <div class="x-phonewrap">
-            <img class="x-hero__bg" src="mirsa-hero.png" alt="" />
+            <img class="x-hero__bg" src="mirsa-hero.webp" alt="" />
             <div class="x-stage" id="x3d" aria-hidden="true"><canvas id="x3d-c"></canvas></div>
             <div class="x-phone" role="img" aria-label="معاينة شاشة مرسى الرئيسية" data-i-aria="phoneAria">
               <div class="x-screen" aria-hidden="true">
                 <div class="x-status"><b>9:41</b><i></i><b>●●●</b></div>
-                <div class="x-scr-head"><strong data-i="brand">مرسى</strong><img src="mirsa-icon.png" alt="" /></div>
+                <div class="x-scr-head"><strong data-i="brand">مرسى</strong><img src="mirsa-icon-256.webp" alt="" /></div>
                 <div class="x-appscard">
                   <span><b data-i="phApps">تطبيقاتك</b><small data-i="phRefresh">التجديد التلقائي</small></span>
                   <span class="x-ring" data-i="phDays">٦ أيام</span>
@@ -843,7 +851,7 @@ html.x3d-on .x-phonewrap{width:100%;min-width:0}
 
         <section class="x-sec" id="about">
           <div class="x-about x-glass x-up">
-            <img class="x-icon" src="mirsa-icon.png" alt="أيقونة مرسى" data-i-alt="iconAlt2" />
+            <img class="x-icon" src="mirsa-icon-256.webp" alt="أيقونة مرسى" data-i-alt="iconAlt2" />
             <div class="x-about__copy">
               <p class="x-eyebrow" data-i="abEye">عن المطوّر</p>
               <h2 data-i="abTitle">مرسى — من تطوير Alaa</h2>
@@ -876,7 +884,7 @@ html.x3d-on .x-phonewrap{width:100%;min-width:0}
         </section>
         <section class="x-sec" id="get">
           <div class="x-cta x-glass x-up">
-            <img class="x-icon" src="mirsa-icon.png" alt="" />
+            <img class="x-icon" src="mirsa-icon-256.webp" alt="" />
             <h2 class="x-shimmer" data-i="ctaTitle">جاهز تبلّش؟</h2>
             <p data-i="ctaSub">حمّل مرسى وثبّت تطبيقاتك على الآيفون. على iOS 27 بدون كمبيوتر.</p>
             <div class="x-actions"><a class="x-btn x-btn--main" href="#apps"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg><span data-i="ctaMain">حمّل مرسى</span></a></div>

@@ -36,7 +36,7 @@ jobs:
       - name: Stage public website files
         run: |
           mkdir _site
-          cp index.html wizard.css wizard.js hark.css hark-hero.css hark.js mirsa-icon.png mirsa-hero.png hero3d.js three.module.min.js RoomEnvironment.js .nojekyll source.json _site/
+          cp index.html wizard.css wizard.js hark.css hark-hero.css hark.js mirsa-icon.png mirsa-hero.png mirsa-hero.webp mirsa-icon-256.webp hero3d.js three.module.min.js RoomEnvironment.js .nojekyll source.json _site/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

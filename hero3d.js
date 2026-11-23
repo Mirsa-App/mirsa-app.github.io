@@ -1,21 +1,21 @@
 import*as THREE from"three";import{RoomEnvironment}from"./RoomEnvironment.js";
 const hero=document.getElementById("x3d"),cv=document.getElementById("x3d-c");
 const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
-let r;try{r=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:true,powerPreference:"high-performance"})}catch(e){}
+let r;try{r=new THREE.WebGLRenderer({canvas:cv,antialias:false,alpha:true,powerPreference:"high-performance"})}catch(e){}
 if(!r||reduce||!hero){r&&r.dispose()}else{
-let PR=Math.min(devicePixelRatio,3);r.setPixelRatio(PR);r.outputColorSpace=THREE.SRGBColorSpace;r.toneMapping=THREE.ACESFilmicToneMapping;r.toneMappingExposure=1.05;const pm=new THREE.PMREMGenerator(r);const envT=pm.fromScene(new RoomEnvironment(),.02).texture;
+let PR=Math.min(devicePixelRatio,2);r.setPixelRatio(PR);r.outputColorSpace=THREE.SRGBColorSpace;r.toneMapping=THREE.ACESFilmicToneMapping;r.toneMappingExposure=1.05;const pm=new THREE.PMREMGenerator(r);const envT=pm.fromScene(new RoomEnvironment(),.04).texture;
 const sc=new THREE.Scene();sc.environment=envT;const cam=new THREE.PerspectiveCamera(40,1,.1,60);
 sc.add(new THREE.AmbientLight(0x9a8cff,.9));
 const l1=new THREE.PointLight(0x2dd4bf,90,40);l1.position.set(5,3,6);sc.add(l1);
 const l2=new THREE.PointLight(0xa78bfa,110,40);l2.position.set(-6,-2,5);sc.add(l2);
 const l3=new THREE.PointLight(0xffe2a8,70,30);l3.position.set(0,2,4);sc.add(l3);
 const world=new THREE.Group();sc.add(world);
-function tex(fn,s=512){const c=document.createElement("canvas");c.width=c.height=s;fn(c.getContext("2d"),s);const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;t.anisotropy=r.capabilities.getMaxAnisotropy();t.minFilter=THREE.LinearMipmapLinearFilter;t.generateMipmaps=true;return t}
+function tex(fn,s=256){const c=document.createElement("canvas");c.width=c.height=s;fn(c.getContext("2d"),s);const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;t.anisotropy=r.capabilities.getMaxAnisotropy();t.minFilter=THREE.LinearMipmapLinearFilter;t.generateMipmaps=true;return t}
 const glowTex=tex((g,s)=>{const k=g.createRadialGradient(s/2,s/2,0,s/2,s/2,s/2);k.addColorStop(0,"#fff");k.addColorStop(.25,"#fff8");k.addColorStop(1,"#fff0");g.fillStyle=k;g.fillRect(0,0,s,s)},128);
 // crescent
 const sh=new THREE.Shape();sh.absarc(0,0,1.25,0,Math.PI*2,false);
 const hole=new THREE.Path();hole.absarc(.52,.26,1.04,0,Math.PI*2,true);sh.holes.push(hole);
-const geo=new THREE.ExtrudeGeometry(sh,{depth:.34,bevelEnabled:true,bevelSize:.08,bevelThickness:.08,bevelSegments:10,curveSegments:200});geo.center();
+const geo=new THREE.ExtrudeGeometry(sh,{depth:.34,bevelEnabled:true,bevelSize:.08,bevelThickness:.08,bevelSegments:5,curveSegments:96});geo.center();
 const moon=new THREE.Mesh(geo,new THREE.MeshPhysicalMaterial({color:0xffc94d,metalness:1,roughness:.1,clearcoat:.6,clearcoatRoughness:.08,envMapIntensity:2.2,emissive:0x5a3600,emissiveIntensity:.35}));
 moon.rotation.z=.55;world.add(moon);
 function glow(col,sc_,op){const m=new THREE.Sprite(new THREE.SpriteMaterial({map:glowTex,color:col,transparent:true,opacity:op,blending:THREE.AdditiveBlending,depthWrite:false}));m.scale.set(sc_,sc_,1);return m}
@@ -38,7 +38,7 @@ const edgeG=new THREE.EdgesGeometry(new THREE.ShapeGeometry(rr(1.07,1.07,.3),14)
 const faceG=new THREE.ShapeGeometry(rr(.86,.86,.22),14);
 // uv for shape geometry: remap 0..1
 {const p=faceG.attributes.position,uv=faceG.attributes.uv;for(let i=0;i<p.count;i++)uv.setXY(i,p.getX(i)/.86+.5,p.getY(i)/.86+.5)}
-const tiles=[];const realImg=new Image();realImg.src="mirsa-icon.png";let realTex=null;realImg.onload=()=>{const c=document.createElement("canvas");c.width=c.height=512;const g=c.getContext("2d");g.drawImage(realImg,0,0,512,512);realTex=new THREE.CanvasTexture(c);realTex.colorSpace=THREE.SRGBColorSpace;realTex.anisotropy=r.capabilities.getMaxAnisotropy();realTex.generateMipmaps=true;realTex.minFilter=THREE.LinearMipmapLinearFilter;const tl=tiles[0];if(tl){tl.userData.face.material.map=realTex;tl.userData.face.material.needsUpdate=true}};
+const tiles=[];const realImg=new Image();realImg.src="mirsa-icon-256.webp";let realTex=null;realImg.onload=()=>{const c=document.createElement("canvas");c.width=c.height=256;const g=c.getContext("2d");g.drawImage(realImg,0,0,256,256);realTex=new THREE.CanvasTexture(c);realTex.colorSpace=THREE.SRGBColorSpace;realTex.anisotropy=r.capabilities.getMaxAnisotropy();realTex.generateMipmaps=true;realTex.minFilter=THREE.LinearMipmapLinearFilter;const tl=tiles[0];if(tl){tl.userData.face.material.map=realTex;tl.userData.face.material.needsUpdate=true}};
 icons.forEach(([c1,c2,draw],i)=>{
  const t=tex((g,s)=>{const k=g.createLinearGradient(0,0,s,s);k.addColorStop(0,c1);k.addColorStop(1,c2);g.fillStyle=k;g.fillRect(0,0,s,s);draw(g,s);const sheen=g.createLinearGradient(0,0,0,s);sheen.addColorStop(0,"#ffffff55");sheen.addColorStop(.5,"#fff0");g.fillStyle=sheen;g.fillRect(0,0,s,s)});
  const grp=new THREE.Group();
@@ -48,7 +48,7 @@ icons.forEach(([c1,c2,draw],i)=>{
  const gl=glow(new THREE.Color(c1),2,.35);gl.position.z=-.3;grp.add(gl);
  grp.userData={face,a:i/icons.length*Math.PI*2,rad:[3.0,3.9][i%2],y:(i%3-1)*.5,sp:.14+(i%3)*.03,d:i*.12};grp.scale.setScalar(0);world.add(grp);tiles.push(grp)});
 // particles
-const N=220,pp=new Float32Array(N*3);for(let i=0;i<N;i++){pp[i*3]=(Math.random()-.5)*20;pp[i*3+1]=(Math.random()-.5)*14;pp[i*3+2]=-4+Math.random()*9}
+const N=110,pp=new Float32Array(N*3);for(let i=0;i<N;i++){pp[i*3]=(Math.random()-.5)*20;pp[i*3+1]=(Math.random()-.5)*14;pp[i*3+2]=-4+Math.random()*9}
 const pg=new THREE.BufferGeometry();pg.setAttribute("position",new THREE.BufferAttribute(pp,3));
 const pts=new THREE.Points(pg,new THREE.PointsMaterial({map:glowTex,color:0xc4b5fd,size:.12,transparent:true,opacity:.55,blending:THREE.AdditiveBlending,depthWrite:false,sizeAttenuation:true}));sc.add(pts);
 let W=1,H=1,camZ=15;
@@ -64,7 +64,7 @@ const clk=new THREE.Clock();
 const ease=x=>1-Math.pow(1-Math.min(Math.max(x,0),1),4);
 let fc=0,ft=performance.now(),low=0;
 function loop(){if(!vis||document.hidden){raf=0;return}raf=requestAnimationFrame(loop);
- if(++fc==90){const n=performance.now(),fps=90000/(n-ft);ft=n;fc=0;if(fps<50){if(++low>=1&&PR>1.5){PR=Math.max(1.5,PR-.5);r.setPixelRatio(PR);r.setSize(W,H,false)}}else low=0}
+ if(++fc==90){const n=performance.now(),fps=90000/(n-ft);ft=n;fc=0;if(fps<50){if(++low>=1&&PR>1.25){PR=Math.max(1.25,PR-.25);r.setPixelRatio(PR);r.setSize(W,H,false)}}else low=0}
  const t=clk.getElapsedTime(),k=ease(t/2.2);
  cx+=(tx-cx)*.05;cy+=(ty-cy)*.05;
  cam.position.set(cx*.5,.3-cy*.3,camZ+(1-k)*4);cam.lookAt(0,0,0);
