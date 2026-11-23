@@ -20,7 +20,6 @@
       href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400&display=swap"
     />
     <link rel="stylesheet" href="hark.css" />
-    <link rel="stylesheet" href="hark-hero.css" />
     <style>
       /* ================= SOFT design (light neumorphic clay) ================= */
       /* ---------- clay design tokens (light) ---------- */
@@ -629,13 +628,40 @@
       }
     </style>
   <link rel="stylesheet" href="wizard.css">
+<style id="x-perf">
+/* perf pass: no fixed blend overlay, no big blurs, backdrop blur only on the nav, no infinite repaint animations */
+.x-grain{display:none!important}
+.x-orb{filter:none!important;animation:none!important;-webkit-mask-image:radial-gradient(closest-side,#000,transparent);mask-image:radial-gradient(closest-side,#000,transparent)}
+html[data-design] *{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+html[data-design] .x-nav{-webkit-backdrop-filter:blur(14px)!important;backdrop-filter:blur(14px)!important}
+html[data-design] .x-glass,html[data-design] .x-trust li,html[data-design] .x-nav,html[data-design] .x-appscard,html[data-design] .x-tabbar{background-color:rgba(18,16,46,.72)}
+html[data-design] .x-iconwrap,html[data-design] .x-shimmer,html[data-design] .x-phone,html[data-design] .x-badge::before,html[data-design] .x-btn--main::after,html[data-design] .x-iconwrap::before{animation:none!important}
+html[data-design] .x-sec:not(#whats){content-visibility:auto;contain-intrinsic-size:auto 640px}
+html[data-design] .x-phone{box-shadow:0 20px 40px rgba(0,0,0,.45)!important}
+.x-scene{position:relative;width:100%;height:clamp(360px,44vw,520px);display:grid;place-items:center;direction:ltr}
+.x-scene>*{grid-area:1/1}
+.x-cres{width:min(62%,260px);height:auto;transform:translate3d(calc(var(--px,0)*10px),calc(var(--py,0)*8px),0) rotate(-14deg);transition:transform .25s ease-out;will-change:transform}
+.x-tile{width:44px;height:44px;border-radius:13px;background:linear-gradient(145deg,var(--c1),var(--c2));box-shadow:inset 0 1px 0 rgba(255,255,255,.55),0 0 0 1px rgba(255,255,255,.35),0 8px 18px rgba(0,0,0,.35);transform:translate3d(calc(var(--x) + var(--px,0)*var(--k,18)*1px),calc(var(--y) + var(--py,0)*var(--k,18)*1px),0);animation:x-fl 5s ease-in-out infinite;animation-delay:var(--d)}
+.x-tile:nth-of-type(odd){--k:-22}
+@keyframes x-fl{50%{margin-top:-9px}}
+html[data-design] .x-phone{display:none}
+@media (prefers-reduced-motion:reduce){.x-tile{animation:none}}
+@media (max-width:640px){
+ html[data-design] .x-hero{padding-top:78px;gap:0}
+ html[data-design] .x-phonewrap{order:-1;margin-top:-6px;width:100%}
+ html[data-design] .x-iconwrap,html[data-design] .x-hero__line{display:none}
+ .x-scene{height:min(78vw,320px)}
+ .x-cres{width:min(52%,210px)}
+ .x-tile{width:38px;height:38px;border-radius:11px;transform:translate3d(calc(var(--x)*.78 + var(--px,0)*var(--k,18)*1px),calc(var(--y)*.78 + var(--py,0)*var(--k,18)*1px),0)}
+}
+</style>
 </head>
   <body>
     <div class="x-grain" aria-hidden="true"></div>
     <div class="x-sky" aria-hidden="true"><span class="x-orb x-orb--1"></span><span class="x-orb x-orb--2"></span><span class="x-orb x-orb--3"></span><span class="x-orb x-orb--4"></span></div>
 
     <nav class="x-nav x-glass" aria-label="Main">
-      <a class="x-nav__brand" href="#top"><img src="mirsa-icon.png" alt="" /><span data-i="brand">مرسى</span></a>
+      <a class="x-nav__brand" href="#top"><img src="mirsa-icon-256.webp" alt="" /><span data-i="brand">مرسى</span></a>
       <div class="x-nav__links">
         <a href="#features" data-i="nFeat">المزايا</a>
         <a href="#whats" data-i="nWhats">شو في بمرسى</a>
@@ -660,7 +686,7 @@
       <main class="main">
         <section class="x-hero">
           <div class="x-hero__copy">
-            <div class="x-iconwrap"><img class="x-icon" src="mirsa-icon.png" alt="أيقونة تطبيق مرسى" data-i-alt="iconAlt" /></div>
+            <div class="x-iconwrap"><img class="x-icon" src="mirsa-icon-256.webp" alt="أيقونة تطبيق مرسى" data-i-alt="iconAlt" /></div>
             <h1 class="x-shimmer" data-i="title">مرسى</h1>
             <p class="x-hero__sub" data-i="heroSub">ثبّت تطبيقاتك على الآيفون. على iOS 27 بدون كمبيوتر، وعلى النسخ الأقدم بدك كمبيوتر للإعداد.</p>
             <p class="x-hero__line" data-i="heroLine">حاوية بلا حدود، سورسات جاهزة، توقيع بشهادتك، وتحديثات تلقائية.</p>
@@ -673,11 +699,31 @@
             </ul>
           </div>
           <div class="x-phonewrap">
-            <img class="x-hero__bg" src="mirsa-hero.png" alt="" />
+            <img class="x-hero__bg" src="mirsa-hero.webp" alt="" />
+            <div class="x-scene" id="x-scene" aria-hidden="true">
+<svg class="x-cres" viewBox="0 0 220 220" width="220" height="220"><defs>
+<linearGradient id="gg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff6c2"/><stop offset=".3" stop-color="#ffd24a"/><stop offset=".65" stop-color="#e8a317"/><stop offset="1" stop-color="#ffe58a"/></linearGradient>
+<linearGradient id="gd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b9740a"/><stop offset="1" stop-color="#7a4a05"/></linearGradient>
+<radialGradient id="gl"><stop offset="0" stop-color="#ffc94d" stop-opacity=".55"/><stop offset=".5" stop-color="#8b5cf6" stop-opacity=".25"/><stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/></radialGradient>
+<mask id="cm"><rect width="220" height="220" fill="#000"/><circle cx="108" cy="110" r="72" fill="#fff"/><circle cx="140" cy="92" r="60" fill="#000"/></mask>
+<mask id="cm2"><rect width="220" height="220" fill="#000"/><circle cx="108" cy="110" r="64" fill="#fff"/><circle cx="138" cy="94" r="55" fill="#000"/></mask></defs>
+<circle cx="110" cy="110" r="110" fill="url(#gl)"/>
+<g mask="url(#cm)"><rect width="220" height="220" fill="url(#gd)" transform="translate(-3 4)"/></g>
+<g mask="url(#cm)"><rect width="220" height="220" fill="url(#gg)"/></g>
+<g mask="url(#cm2)"><rect width="220" height="220" fill="url(#gg)" opacity=".55" transform="translate(-4 -3) scale(1.02)"/></g>
+<path d="M52 82A72 72 0 0 1 120 40" fill="none" stroke="#fffbe0" stroke-width="3" stroke-linecap="round" opacity=".85"/>
+</svg>
+<i class="x-tile" style="--x:-96px;--y:-62px;--c1:#2dd4bf;--c2:#0f766e;--d:0s"></i>
+<i class="x-tile" style="--x:98px;--y:-70px;--c1:#a78bfa;--c2:#5b21b6;--d:-1s"></i>
+<i class="x-tile" style="--x:-118px;--y:20px;--c1:#f472b6;--c2:#9d174d;--d:-2s"></i>
+<i class="x-tile" style="--x:120px;--y:30px;--c1:#60a5fa;--c2:#1d4ed8;--d:-3s"></i>
+<i class="x-tile" style="--x:-70px;--y:96px;--c1:#fbbf24;--c2:#b45309;--d:-4s"></i>
+<i class="x-tile" style="--x:78px;--y:100px;--c1:#34d399;--c2:#047857;--d:-5s"></i>
+</div>
             <div class="x-phone" role="img" aria-label="معاينة شاشة مرسى الرئيسية" data-i-aria="phoneAria">
               <div class="x-screen" aria-hidden="true">
                 <div class="x-status"><b>9:41</b><i></i><b>●●●</b></div>
-                <div class="x-scr-head"><strong data-i="brand">مرسى</strong><img src="mirsa-icon.png" alt="" /></div>
+                <div class="x-scr-head"><strong data-i="brand">مرسى</strong><img src="mirsa-icon-256.webp" alt="" /></div>
                 <div class="x-appscard">
                   <span><b data-i="phApps">تطبيقاتك</b><small data-i="phRefresh">التجديد التلقائي</small></span>
                   <span class="x-ring" data-i="phDays">٦ أيام</span>
@@ -831,7 +877,7 @@
 
         <section class="x-sec" id="about">
           <div class="x-about x-glass x-up">
-            <img class="x-icon" src="mirsa-icon.png" alt="أيقونة مرسى" data-i-alt="iconAlt2" />
+            <img class="x-icon" src="mirsa-icon-256.webp" alt="أيقونة مرسى" data-i-alt="iconAlt2" />
             <div class="x-about__copy">
               <p class="x-eyebrow" data-i="abEye">عن المطوّر</p>
               <h2 data-i="abTitle">مرسى — من تطوير Alaa</h2>
@@ -864,7 +910,7 @@
         </section>
         <section class="x-sec" id="get">
           <div class="x-cta x-glass x-up">
-            <img class="x-icon" src="mirsa-icon.png" alt="" />
+            <img class="x-icon" src="mirsa-icon-256.webp" alt="" />
             <h2 class="x-shimmer" data-i="ctaTitle">جاهز تبلّش؟</h2>
             <p data-i="ctaSub">حمّل مرسى وثبّت تطبيقاتك على الآيفون. على iOS 27 بدون كمبيوتر.</p>
             <div class="x-actions"><a class="x-btn x-btn--main" href="#apps"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg><span data-i="ctaMain">حمّل مرسى</span></a></div>
@@ -1082,5 +1128,10 @@ load();
 })();
 </script>
 <script src="wizard.js"></script>
+<script>(function(){var s=document.getElementById("x-scene");if(!s||matchMedia("(prefers-reduced-motion: reduce)").matches)return;var tx=0,ty=0,q=0,on=true;function ap(){q=0;s.style.setProperty("--px",tx.toFixed(3));s.style.setProperty("--py",ty.toFixed(3))}function set(x,y){tx=Math.max(-1,Math.min(1,x));ty=Math.max(-1,Math.min(1,y));if(!q&&on)q=requestAnimationFrame(ap)}
+new IntersectionObserver(function(e){on=e[0].isIntersecting;s.style.animationPlayState=on?"":"paused"}).observe(s);
+addEventListener("pointermove",function(e){set((e.clientX/innerWidth-.5)*2,(e.clientY/innerHeight-.5)*2)},{passive:true});
+addEventListener("deviceorientation",function(e){if(e.gamma!=null)set(e.gamma/25,(e.beta-50)/25)},{passive:true});
+addEventListener("touchstart",function(){if(window.DeviceOrientationEvent&&DeviceOrientationEvent.requestPermission)DeviceOrientationEvent.requestPermission().catch(function(){})},{once:true,passive:true})})()</script>
 </body>
 </html>
